@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script src="js/Preferences.js"></script>
+        <script src="js/Localization.js"></script>
+        <script src="js/City.js"></script>
+        <script src="js/Area.js"></script>
+        <script src="js/Alert.js"></script>
+        <script src="js/History.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/popup.css" />
+    </head>
+    <body>
+        <div id="tablinks_container">
+            <button class="tablink" forPageID="Home">{recentAlerts}</button>
+            <button class="tablink" forPageID="Sounds">{sounds}</button>
+            <button class="tablink" forPageID="Cities">{cities}</button>
+            <button class="tablink" forPageID="Other">{other}</button>
+        </div>
+            
+        <div id="Home" class="page">
+
+        </div>
+
+        <div id="Sounds" class="page">
+            <h3>{selectSoundTitle}</h3>
+            <p>{selectSoundDesc}</p>
+            <input type="radio" name="sound" id="bell"><label for="bell">{bell}</label><br>
+            <input type="radio" name="sound" id="tone"><label for="tone">{tone}</label><br>
+            <input type="radio" name="sound" id="alarm"><label for="alarm">{alarm}</label><br>
+            <input type="radio" name="sound" id="redalert"><label for="redalert">{redalert}</label><br>
+            <input type="radio" name="sound" id="redalert2"><label for="redalert2">{redalert2}</label><br>
+            <input type="radio" name="sound" id="warning"><label for="warning">{warning}</label><br>
+            <input type="radio" name="sound" id="message"><label for="message">{message}</label><br>
+            <input type="radio" name="sound" id="secondary"><label for="secondary">{secondary}</label><br>
+            <input type="radio" name="sound" id="alert"><label for="alert">{alert}</label><br>
+            <input type="radio" name="sound" id="calm"><label for="calm">{calm}</label><br>
+            <input type="radio" name="sound" id="silent"><label for="silent">{silent}</label>
+        </div>
+            
+        <div id="Cities" class="page">
+            <h3>{selectCitiesTitle}</h3>
+            <p>{selectCitiesDesc}</p>
+            <div id="selection">
+                <div class="flex">
+                    <button id="clear" class="card">{clearSelection}</button>
+                    <input id="search" class="card" placeholder="{searchCities}" />
+                </div>
+                <div id="selected"></div>
+            </div>
+        </div>
+            
+        <div id="Other" class="page">
+            <h3>{otherTitle}</h3>
+
+            <h4>{alertsTitle}</h4>
+            <input type="checkbox" id="desktopNotifications"><label for="desktopNotifications">{desktopNotifications}</label><br>
+            <input type="checkbox" id="backgroundHidePopup"><label for="backgroundHidePopup">{backgroundHidePopup}</label><br>
+            <input type="checkbox" id="alertsOverSites"><label for="alertsOverSites">{alertsOverSites}</label><br>
+
+            <h4 id="languageTitle">{selectLanguageTitle}</h4>
+            <select id="language">
+                <option value="HE">עברית</option>
+                <option value="EN">English</option>
+                <option value="ES">Español</option>
+                <option value="AR">عربيه</option>
+                <option value="RU">русский</option>
+            </select>
+
+            <hr/>
+
+            <button id="testAlert">{testAlert}</button>
+
+            <hr/>
+
+            <h3>{aboutTitle}</h3>
+            <p>
+                {aboutText}
+                <br><br><br>
+                <img style="width: 60;" src="https://www.tzevaadom.co.il/icon.png"/>
+            </p>
+        </div>
+    </body>
+    <script src="js/popup.js"></script>
+</html>

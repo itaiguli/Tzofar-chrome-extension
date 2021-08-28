@@ -1,0 +1,335 @@
+@font-face {
+	font-family: fontx;
+	src: url(../fonts/regular.otf)
+}
+
+@font-face {
+	font-family: fontx;
+	src: url(../fonts/bold.otf);
+	font-weight: 700
+}
+
+* {
+	font-family: fontx, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 600px;
+    width: 450px;
+    font-family: Arial;
+    direction: rtl;
+    overflow: hidden !important;
+    margin: unset;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+        
+/* Style tab links */
+#tablinks_container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+}
+
+.tablink {
+    background-color: #252424;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    font-size: 17px;
+    width: 110px;
+    border-radius: 15px;
+    margin: 7px 3px;
+}
+
+.tablink:first-of-type {
+    min-width: 150px;
+}
+        
+.tablink:hover {
+    background-color: #333333;
+}
+
+/* Style the tab page */
+.page {
+    background-color: rgb(43, 43, 43);
+    color: white;
+    display: none;
+    padding: 0 20px;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    overflow: overlay;
+}
+
+.page h3, .page:not(#Home) p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page:not(#Home) p {
+    margin: unset;
+    margin-bottom: 35px;
+}
+
+#Home {
+    background-color: #ededed;
+    color: black;
+}
+
+/* hr */
+hr {
+    border: unset;
+    height: 5px;
+    max-width: 300px;
+    margin: 30px auto;
+    border-radius: 2px;
+    background-color: #252424;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    height: 15%;
+    width: 13px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: rgb(194, 194, 194);
+    -webkit-text-size-adjust: none;
+}
+
+::-webkit-scrollbar{
+    padding-top: 30px;
+    height: 15%;
+    width: 13px;
+    background-color: transparent;
+}
+
+/* History */
+#history {
+    padding: 10px 0;
+}
+
+.history_item {
+    display: flex;
+    background-color: #fdfdfd;
+    border-radius: 7px;
+    overflow: auto;
+    max-width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history_item:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+/* Data div */
+.history_item div:first-of-type {
+    padding: 10px;
+    width: -webkit-fill-available;
+}
+
+/* Threats icons div */
+.history_item div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    background-color: #d50f02;
+    width: 45px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Threats icon */
+.history_item img {
+    width: 15px;
+    margin: 10px 0;
+}
+
+.history_item img[threat='0'] {
+    width: 40px;
+    margin: unset;
+}
+
+.history_item p {
+    margin: unset;
+}
+
+/* History item - Date */
+.history_item .date {
+    font-size: 12px;
+    color: rgb(228, 0, 0);
+    margin: 5px 0;
+    direction: ltr;
+    text-align: right;
+}
+
+/* History item - Areas */
+.history_item .areas {
+    font-size: 16px;
+    color: rgb(15, 15, 15);
+}
+
+/* History item - Cities */
+.history_item .cities {
+    font-size: 14px;
+    margin-top: 5px;
+    color: rgb(56, 56, 56);
+}
+
+/* Input & Label */
+input {
+    margin-left: 5px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Sounds selection */
+#Sound label {
+    font-size: 18px;
+}
+
+#Sounds input{
+    margin-right: 40%;
+}
+
+/* Flex div */
+.flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+/* Card */
+.card {
+    background-color: #262626;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 4.8px;
+    margin-bottom: 15px;
+    overflow-y: overlay;
+    color: #c4c4c4;
+}
+
+button.card:hover, a.card:hover, .focused, #info a:nth-child(1):hover {
+    background-color: rgb(31, 31, 31);
+}
+
+
+/* Cities Selection */
+#selection p {
+    margin: 0 5px !important;
+}
+
+#selection button {
+    border: unset;
+    display: flex;
+    margin: unset;
+    min-width: fit-content;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: unset;
+}
+
+#selection .item button {
+    padding: 3px;
+    width: 30px;
+}
+
+#selection .item p {
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+#selection .item {
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    align-items: center;
+    display: inline-flex;
+}
+
+#selection #selected {
+    height: 300px;
+    overflow-y: overlay;
+    text-align: center;
+}
+
+#selection input {
+    border: none;
+    margin-bottom: unset;
+    width: -webkit-fill-available;
+    max-width: 300px;
+    margin-right: 5px;
+    background-image: url('https://i.imgur.com/PAAxJRM.png');
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: left center;
+    background-origin: content-box;
+    padding-left: 10px;
+}
+
+#autocomplete {
+    position: absolute;
+    z-index: 5;
+    margin-top: 40px;
+    margin-right: 52px;
+    width: 350px;
+    max-height: 300px;
+    overflow: auto;
+    border-radius: 4.8px;
+    background-color: #262626;
+}
+
+#autocomplete button {
+    display: unset;
+    width: -webkit-fill-available;
+    text-align: unset;
+}
+
+#autocomplete button p:first-of-type {
+    font-weight: bold;
+}
+
+#languageTitle {
+    display: inline-block;
+    margin: 5px 5px;
+}
+
+select {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #e41102;
+    background-color: #252424;
+    border: none;
+}
+
+#testAlert {
+    background-color: #e41102;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    display: block;
+    margin: -10px auto;
+    color: #1c1c1c;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+{
+   "background": {
+      "page": "backgroundService.html"
+   },
+   "browser_action": {
+      "default_icon": "img/48.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [
+      {
+         "matches": ["<all_urls>"],
+         "js": ["js/contentScript.js"],
+         "run_at": "document_end"
+      }
+   ],
+   "description": "תוסף התרעות על אזעקות צבע אדום",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "48": "img/48.png"
+   },
+   "manifest_version": 2,
+   "name": "צופר - צבע אדום",
+   "permissions": [ "*://tzevaadom.co.il/*", "*://*.tzevaadom.co.il/*", "background", "notifications", "storage", "tabs" ],
+   "short_name": "צופר - צבע אדום",
+   "content_security_policy": "script-src 'self' https://maps.googleapis.com https://maps.gstatic.com; object-src 'self'",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "web_accessible_resources": ["logo.png", "alert.html"],
+   "version": "1.0.3"
+}

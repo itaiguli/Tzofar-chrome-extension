@@ -1,0 +1,129 @@
+@font-face {
+	font-family: fontx;
+	src: url(../fonts/regular.otf)
+}
+
+@font-face {
+	font-family: fontx;
+	src: url(../fonts/bold.otf);
+	font-weight: 700
+}
+
+* {
+	font-family: fontx, sans-serif
+}
+
+html, body {
+    display: flex;
+    direction: rtl;
+    font-family: "Helvetica","Arial",sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #fefefe;
+}
+
+#menu-container {
+    display: flex;
+}
+
+.button {
+    cursor: pointer;
+    color: #fefefe;
+    width: -webkit-fill-available;
+    text-align: center;
+    padding: 10px;
+    height: 10px;
+    max-height: 10px;
+    background-color: #373737;
+}
+
+.button:hover {
+    background-color: #242424;
+}
+
+.flex {
+    display: flex;
+    position: relative;
+    flex: 1;
+    height: -webkit-fill-available;
+    overflow: hidden;
+}
+
+#alert {
+    display: flex;
+    flex-direction: column;
+    background-color: #cd3634;
+    width: -webkit-fill-available;
+    padding: 10px 25px;
+}
+
+.cities-container {
+    height: -webkit-fill-available;
+    overflow: auto;
+}
+
+.cities-container city {
+    padding: 3px 9px;
+    margin: 0 1.5px;
+    margin-bottom: 4px;
+    background-color: #ae2624;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #fefefe;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cities-container city:hover {
+    background-color: #6e1816;
+}
+
+#map {
+    width: -webkit-fill-available;
+    background-color: #c7c7c7;
+}
+
+#map::before {
+    position: absolute;
+    font-size: 14px;
+    z-index: 9999;
+    color: #ff000000;
+    height: -webkit-fill-available;
+    background-image: linear-gradient(to right, rgba(169, 162, 162, 0), #cd363487, #cd3634db, #cd3634);
+    content: '.';
+    width: 70px;
+    pointer-events: none;
+}
+
+#logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 35px;
+}
+
+::-webkit-scrollbar-thumb {
+	height: 15%;
+	width: 12px;
+	border-radius: 8px;
+	border: 4px solid transparent;
+	background-clip: content-box;
+	background-color: #8a1b1a;
+	-webkit-text-size-adjust: none
+}
+
+::-webkit-scrollbar {
+	padding-top: 30px;
+	height: 15%;
+	width: 12px;
+	background-color: transparent
+}
